@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "store.apps.StoreConfig",
+    "users.apps.UsersConfig",
 ]
 
 MIDDLEWARE = [
@@ -134,6 +135,9 @@ STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 LOGIN_REDIRECT_URL = "store:products"
+
+
+AUTH_USER_MODEL = "users.User"
 
 
 # for authentication with email/username
